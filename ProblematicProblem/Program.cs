@@ -6,7 +6,7 @@ namespace ProblematicProblem
 {
     class Program
     {
-        Random Random;
+        Random rng;
 static bool cont = true;
         static List<string> activities = new List<string>() { "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting" };
         static void Main(string[] args)
@@ -75,8 +75,8 @@ static bool cont = true;
             Console.WriteLine($"Oh no! Looks like you are too young to do {randomActivity}");
             Console.WriteLine("Pick something else!");
             activities.Remove(randomActivity);
-            string randomNumber = rng.Next(activities.Count);
-            string randomActivity = activities[randomNumber];
+            randomNumber = newrng.Next(activities.Count);
+            randomActivity = activities[randomNumber];
         }
                 Console.Write($"Ah got it! {randomActivity}, your random activity is: {userName}! Is this ok or do you want to grab another activity? Keep/Redo: ");
                 Console.WriteLine();
